@@ -9,14 +9,13 @@ void setup() {
   smooth();
   
   // تتبع الأردوينو عبر منفذ الـ USB
-  // تأكدي من كتابة منفذ الـ COM الفعلي الخاص بجهازكِ هنا (مثال: COM4)
+
   String portName = "COM5"; 
   myPort = new Serial(this, portName, 9600);
   myPort.bufferUntil('\n'); // القراءة عند نهاية السطر
 }
 
 void draw() {
-  // استخدام خلفية سوداء مع تأثير شفافية بسيط (Fade) لإعطاء توهج ذيل الرادار كالمحترفين
   fill(0, 0, 0, 15); 
   noStroke();
   rect(0, 0, width, height);
